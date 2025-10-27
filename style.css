@@ -1,0 +1,406 @@
+/* *******************************************************
+   Змінні
+********************************************************* */
+:root {
+  --clr-borders: rgba(241, 232, 150, 0.915);
+  --clr-accent: rgba(158, 187, 99, 0.908);
+  --clr-title: rgba(240, 221, 112, 0.89);
+}
+
+/* *******************************************************
+   Скидання стилів (CSS Reset)
+********************************************************* */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: black;
+  color: rgb(232, 239, 228);
+}
+
+/* *******************************************************
+   Основні стилі
+********************************************************* */
+body {
+  min-height: 100dvh;
+  padding: 20px;
+  background: url("images/space.jpg") center / cover no-repeat fixed;
+  font: 16px / 1.5 system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* *******************************************************
+   Типографіка
+********************************************************* */
+h1,
+h2,
+h3 {
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 15px 0;
+  display: inline-block;
+  padding: 5px;
+  border-bottom: 2px dashed var(--clr-borders);
+}
+
+p {
+  margin: 10px 0;
+}
+
+.accent {
+  color: var(--clr-accent);
+  font-weight: 500;
+}
+
+h3,
+.accent-2 {
+  /* background-color: #333; */
+  background: #eff0ed1d;
+  padding: 0 6px;
+  font-weight: 500;
+}
+
+/* *******************************************************
+   Зображення
+********************************************************* */
+img {
+  border: 2px inset black;
+  display: block;
+  max-width: 100%;
+}
+
+/* *******************************************************
+   Макет сторінки
+********************************************************* */
+header,
+main {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 10px;
+  color: var(--clr-title);
+  background-color: rgb(15, 15, 15);
+  border: 1px solid var(--clr-borders);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+
+main {
+  padding-bottom: 5px;
+  background-color: rgba(18, 19, 18, 0.75);
+  border: 1px solid var(--clr-borders);
+  border-radius: 0 0 5px 5px;
+}
+
+section {
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--clr-borders);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* *******************************************************
+   Кнопки та утиліти
+********************************************************* */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--clr-accent);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* *******************************************************
+   Анімація "друкарської машинки"
+********************************************************* */
+.typewriter {
+  display: flex;
+  justify-content: center;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 3s steps(14) forwards, blink 1s 3s step-end 3,
+    hide-cursor 0s 5.5s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hide-cursor {
+  to {
+    border-color: transparent;
+  }
+}
+
+/* *******************************************************
+   Вкладки (Tabs)
+********************************************************* */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(14, 14, 14);
+  padding: 8px 0;
+}
+
+.tab-btn {
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--clr-borders);
+  color: var(--clr-accent);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-family: monospace;
+  transition: 0.3s;
+}
+
+.tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn.active {
+  background-color: var(--clr-accent);
+  color: black;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* *******************************************************
+   Заголовки, що розкриваються (Toggle Headers)
+********************************************************* */
+.toggle-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 0.5em;
+}
+
+.toggle-header button {
+  transition: transform 0.3s ease;
+  color: var(--clr-title);
+}
+
+.toggle-header.active button {
+  transform: rotate(90deg);
+}
+
+.content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-left: 1em;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+/* *******************************************************
+   Списки
+********************************************************* */
+li::marker {
+  color: var(--clr-accent);
+}
+
+li {
+  margin: 5px 0;
+}
+
+ul,
+ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+  color: inherit;
+  list-style: none;
+}
+
+.inner-list {
+  list-style-type: circle;
+  margin-left: 1rem;
+  font-size: 15px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.progress-container {
+  width: 100%;
+  background: #4f524d7f;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 22px;
+  border: 1px solid var(--clr-borders);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--clr-accent);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 22px;
+  transition: width 0.3s ease;
+}
+
+/* *******************************************************
+   Section navigation
+********************************************************* */
+
+.section-nav {
+  background: #eff0ed1d;
+  border-left: 4px solid var(--clr-title);
+  padding: 1em 1.2em;
+  margin: 1em 0 2em;
+  border-radius: 0.5em;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.section-nav .nav-title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.section-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.section-nav li {
+  margin: 0.3em 0;
+}
+
+.section-nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color 0.2s;
+}
+
+.section-nav a:hover {
+  color: var(--clr-accent);
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background-color: rgba(18, 19, 18, 0.75);
+  color: var(--clr-accent);
+  border: 1px solid var(--clr-borders);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgb(229, 231, 226);
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 999;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.2);
+}
+
+/* *******************************************************
+   Адаптивність
+********************************************************* */
+
+@media (min-width: 651px) and (max-width: 850px) {
+  header,
+  main {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 650px) {
+  header,
+  main {
+    max-width: 98%;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тема #</title>
+
+    <!-- ***********************************************
+     Prism.js — підсвічування синтаксису
+    *************************************************** -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"
+      defer
+    ></script>
+
+    <!-- ===== Мови, які використовуємо ===== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"
+      defer
+    ></script>
+    <!-- HTML -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"
+      defer
+    ></script>
+    <!-- CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"
+      defer
+    ></script>
+    <!-- JavaScript -->
+
+    <!-- ===== Плагіни ===== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"
+      defer
+    ></script>
+
+    <!-- ***********************************************
+         Власні стилі та скрипти
+    *************************************************** -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ***********************************************
+         Шапка сторінки
+    *************************************************** -->
+    <header>
+      <div class="typewriter">
+        <div><h1>⭒.⋆ Тема # ⋆˚.</h1></div>
+      </div>
+
+      <p><span class="accent">Назва теми</span></p>
+
+      <!-- Вкладки (навігація між частинами) -->
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="part1">Частина 1</button>
+        <button class="tab-btn" data-tab="part2">Частина 2</button>
+      </nav>
+    </header>
+
+    <!-- ***********************************************
+         Основний вміст сторінки
+    *************************************************** -->
+    <main>
+      <!-- *************** Частина 1 *************** -->
+      <div class="tab-content active" id="tab-part1">
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>1: <span class="accent">Приклад</span></h2>
+          </div>
+          <div class="content">
+            <p>Приклад:</p>
+            <pre><code class="language-javascript">console.log("Hello, world!");</code></pre>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>2: <span class="accent">Завдання</span></h2>
+          </div>
+          <div class="content">
+            <p>Виконати наступні кроки:</p>
+            <ol>
+              <li>...</li>
+              <li>...</li>
+            </ol>
+            <p>Очікуваний результат:</p>
+            <img src="images/example1.jpg" alt="Очікуваний результат" />
+          </div>
+        </section>
+      </div>
+
+      <!-- *************** Частина 2 *************** -->
+      <div class="tab-content" id="tab-part2">
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>1: <span class="accent">Приклад</span></h2>
+          </div>
+          <div class="content">
+            <p>Приклад:</p>
+            <pre><code class="language-javascript">console.log("Hello, world!");</code></pre>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>2: <span class="accent">Завдання</span></h2>
+          </div>
+          <div class="content">
+            <p>Виконати наступні кроки:</p>
+            <ol>
+              <li>...</li>
+              <li>...</li>
+            </ol>
+            <p>Очікуваний результат:</p>
+            <img src="images/example2.jpg" alt="Очікуваний результат" />
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

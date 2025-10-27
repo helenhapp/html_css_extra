@@ -1,0 +1,665 @@
+<!-- 
+HTML_CSS COURSE
+LESSON 6 
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тема 6: Повторення 1</title>
+
+    <!-- ***********************************************
+     Prism.js — підсвічування синтаксису
+    *************************************************** -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"
+      defer
+    ></script>
+
+    <!-- ===== Мови, які використовуємо ===== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"
+      defer
+    ></script>
+    <!-- HTML -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"
+      defer
+    ></script>
+    <!-- CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"
+      defer
+    ></script>
+    <!-- JavaScript -->
+
+    <!-- ===== Плагіни ===== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"
+      defer
+    ></script>
+
+    <!-- ***********************************************
+         Власні стилі та скрипти
+    *************************************************** -->
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <script src="snippets.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ***********************************************
+         Шапка сторінки
+    *************************************************** -->
+    <header>
+      <div class="typewriter">
+        <div><h1>⭒.⋆ Тема 6 ⋆˚.</h1></div>
+      </div>
+
+      <p><span class="accent">Повторення тем 1-5</span></p>
+
+      <!-- Вкладки (навігація між частинами) -->
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="part1">Веб-сторінка</button>
+        <button class="tab-btn" data-tab="part2">Форматування тексту</button>
+        <button class="tab-btn" data-tab="part3">Списки</button>
+        <button class="tab-btn" data-tab="part4">Зображення</button>
+      </nav>
+    </header>
+
+    <!-- ***********************************************
+         Основний вміст сторінки
+    *************************************************** -->
+    <main>
+      <!-- *************** Частина 1 (Веб-сторінка) *************** -->
+      <div class="tab-content active" id="tab-part1">
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Теорія: <span class="accent">Веб-сторінка</span></h2>
+          </div>
+          <div class="content">
+            <h3 id="h3-structure">
+              🪐 Cтруктура сайту:<span class="accent"> html, head, body</span>
+            </h3>
+            <p>
+              Кожна веб-сторінка обов'язково має основу (три теги: html, head та
+              body).
+            </p>
+            <pre><code id="snippet1" class="language-markup"></code></pre>
+
+            <h3 id="h3-headings">
+              🛸 Заголовки: <span class="accent"> h1 - h6</span>
+            </h3>
+            <p>
+              Теги &lt;h1&gt;&lt;/h1&gt;, &lt;h2&gt;&lt;/h2&gt;, ...
+              &lt;h6&gt;&lt;/h6&gt; використовуються для створення заголовків
+              різних рівнів. Вони допомагають структурувати сторінку, як розділи
+              в книжці. h1 - найголовніший та найбільший заголовок.
+            </p>
+            <pre><code id="snippet2" class="language-markup"></code></pre>
+            <img src="example_images/example_01.png" alt="example 1" />
+
+            <h3 id="h3-paragraphs">
+              🌌 Абзаци (параграфи): <span class="accent">p</span>
+            </h3>
+            <p>
+              Тег &lt;p&gt;&lt;/p&gt; використовується для створення абзацу
+              тексту. Браузер автоматично додає відступ до та після абзацу.
+            </p>
+            <pre><code id="snippet3" class="language-markup"></code></pre>
+            <img src="example_images/example_02.png" alt="example 2" />
+
+            <h3 id="h3-br">
+              ⭐ Перенесення рядка: <span class="accent">br</span>
+            </h3>
+            <p>
+              Тег &lt;br&gt; робить перехід на новий рядок всередині абзацу.
+            </p>
+            <pre><code id="snippet4" class="language-markup"></code></pre>
+            <img src="example_images/example_03.png" alt="example 3" />
+          </div>
+        </section>
+
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2><span class="accent">Приклад з роботом 1</span></h2>
+          </div>
+          <div class="content">
+            <img
+              src="./example_images/ROBOT_EXAMPLE_01.jpg"
+              alt="приклад з роботом 1"
+            />
+            <br />
+            <img
+              src="./example_images/ROBOT_EXAMPLE_02.jpg"
+              alt="приклад з роботом 2"
+            />
+          </div>
+        </section>
+
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2><span class="accent">Приклад з роботом 2</span></h2>
+          </div>
+          <div class="content">
+            <img
+              src="./example_images/ROBOT_EXAMPLE_03.jpg"
+              alt="приклад з роботом 3"
+            />
+          </div>
+        </section>
+      </div>
+
+      <!-- *************** Частина 2 (Форматування тексту) *************** -->
+      <div class="tab-content" id="tab-part2">
+        <!-- Теорія: Форматування тексту -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Теорія: <span class="accent">Форматування тексту</span></h2>
+          </div>
+          <div class="content">
+            <h3 id="hr-align">
+              ☀️ Вирівнювання тексту: <span class="accent">align</span>
+            </h3>
+            <p>
+              Атрибут align дозволяє розташувати текст: зліва (left), справа
+              (right) або по центру (center).
+            </p>
+            <pre><code id="snippet5" class="language-markup"></code></pre>
+            <img src="example_images/example_04.png" alt="example 4" />
+
+            <h3 id="hr-b-i">
+              🍕 Жирний і курсив: <span class="accent">b, i</span>
+            </h3>
+            <p>&lt;b&gt; робить текст жирним, &lt;i&gt; — курсивним.</p>
+            <pre><code id="snippet6" class="language-markup"></code></pre>
+            <img src="example_images/example_05.png" alt="example 5" />
+
+            <h3 id="hr-u-s">
+              🌙 Підкреслений і перекреслений:
+              <span class="accent">u, s</span>
+            </h3>
+            <p>&lt;u&gt; підкреслює, &lt;s&gt; перекреслює текст.</p>
+            <pre><code id="snippet7" class="language-markup"></code></pre>
+            <img src="example_images/example_06.png" alt="example 6" />
+
+            <h3 id="hr-sup-sub">
+              🥪 Верхні та нижні індекси: <span class="accent">sup, sub</span>
+            </h3>
+            <p>
+              &lt;sub&gt; робить індекс знизу, &lt;sup&gt; робить індекс зверху.
+            </p>
+            <pre><code id="snippet8" class="language-markup"></code></pre>
+            <img src="example_images/example_07.png" alt="example 7" />
+          </div>
+        </section>
+
+        <!-- Теорія: Стилі -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Теорія: <span class="accent">Стилі</span></h2>
+          </div>
+          <div class="content">
+            <h3 id="hr-style-tag">
+              🌠 Додавання стилів: тег <span class="accent">style</span>
+            </h3>
+            <p>За допомогою CSS можна змінювати зовнішній вигляд елементів.</p>
+            <pre><code id="snippet9" class="language-markup"></code></pre>
+
+            <h3 id="hr-css-rules">👨‍🚀 Синтаксис CSS</h3>
+            <p>...</p>
+            <pre><code id="snippet11" class="language-markup"></code></pre>
+
+            <h3 id="hr-color">
+              🌍 Властивість — колір тексту: <span class="accent">color</span>
+            </h3>
+            <p>
+              Щоб задати певному елементу стиль, потрібно використати тег style
+              всередині тегу head.
+            </p>
+
+            <h3 id="hr-background">
+              👽 Властивість — колір фону:
+              <span class="accent">background-color</span>
+            </h3>
+            <p>...</p>
+
+            <h3 id="hr-font-size">
+              🚀 Властивість — розмір тексту:
+              <span class="accent">font-size</span>
+            </h3>
+            <p>...</p>
+
+            <h3 id="hr-font-family">
+              👾 Властивість — шрифт:
+              <span class="accent">font-family</span>
+            </h3>
+            <p>...</p>
+
+            <h3 id="hr-font-weight">
+              🌆 Властивість — жирність шрифту:
+              <span class="accent">font-weight</span>
+            </h3>
+            <p>...</p>
+            <pre><code id="snippet10" class="language-markup"></code></pre>
+            <img src="example_images/example_08.png" alt="example 8" />
+          </div>
+        </section>
+
+        <!-- Завдання 1 -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Завдання 1</h2>
+          </div>
+
+          <div class="content">
+            <h3>🌟 Очікуваний результат:</h3>
+            <img src="example_images/task_01.jpg" alt="Очікуваний результат" />
+
+            <h3>📃 План:</h3>
+
+            <div class="checklist-wrapper">
+              <ol class="checklist">
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Створити новий файл з назвою
+                      <span class="accent-2">index_6_1.html</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Задати структуру сайту (теги:
+                      <span class="accent">html, head, body</span>)
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати заголовок 1-го рівня з текстом:
+                      <span class="accent-2">Завдання 1</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати шість абзаців з текстом:
+                      <ul class="inner-list">
+                        <li>
+                          абзац 1:
+                          <span class="accent-2"
+                            >Я граю у Minecraft — це пісочниця, де можна
+                            будувати все, що забажаєш.</span
+                          >
+                        </li>
+                        <li>
+                          абзац 2:
+                          <span class="accent-2"
+                            >Іноді відкриваю Roblox, але зараз граю менше, ніж
+                            раніше.</span
+                          >
+                        </li>
+                        <li>
+                          абзац 3:
+                          <span class="accent-2"
+                            >Моя улюблена стратегія — планувати все заздалегідь
+                            і ділитися з друзями!</span
+                          >
+                        </li>
+                        <li>
+                          абзац 4: <span class="accent-2">Вода: H2O</span>
+                        </li>
+                        <li>
+                          абзац 5:
+                          <span class="accent-2"
+                            >Формула Піфагора: x2 + y2 = z2</span
+                          >
+                        </li>
+                        <li>
+                          абзац 6:
+                          <span class="accent-2"
+                            >Перенесення рядка використовуючи тег
+                            &amp;lt;br&amp;gt;Ось новий рядок тексту!</span
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Відформатувати текст як на картинці (<span class="accent"
+                        >b, i, u, s, sup, sub, br</span
+                      >)
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати тег <span class="accent">style</span>. Застосувати
+                      CSS стилі до тегів:
+
+                      <ul class="inner-list">
+                        <li>
+                          <span class="accent-2">body</span> { колір фону:
+                          <span class="accent-2">#E6FFE6</span>; шрифт:
+                          <span class="accent-2">Verdana</span>; }
+                        </li>
+                        <li>
+                          <span class="accent-2">h1</span> { колір тексту:
+                          <span class="accent-2">darkblue</span>; розмір тексту:
+                          <span class="accent-2">34px</span>; }
+                        </li>
+                        <li>
+                          <span class="accent-2">p</span> { розмір тексту:
+                          <span class="accent-2">18px</span>; }
+                        </li>
+                      </ul>
+                    </span>
+                  </label>
+                </li>
+              </ol>
+
+              <div class="progress-container">
+                <div class="progress-bar">0%</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- *************** Частина 3 (Списки) *************** -->
+      <div class="tab-content" id="tab-part3">
+        <!-- Теорія: Списки -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Теорія: <span class="accent">Списки</span></h2>
+          </div>
+          <div class="content">
+            <h3>Марковані списки</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+
+            <h3>Нумеровані списки</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+
+            <h3>Типи маркерів</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+
+            <h3>list-style</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+          </div>
+        </section>
+
+        <!-- Теорія: Лінії -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Теорія: <span class="accent">Лінії</span></h2>
+          </div>
+          <div class="content">
+            <h3>hr</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+
+            <h3>width</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+
+            <h3>height</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+          </div>
+        </section>
+
+        <!-- Завдання 2 -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Завдання 2</h2>
+          </div>
+
+          <div class="content">
+            <h3>🌟 Очікуваний результат:</h3>
+            <img src="example_images/task_02.jpg" alt="Очікуваний результат" />
+
+            <h3>📃 План:</h3>
+
+            <div class="checklist-wrapper">
+              <ol class="checklist">
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Створити новий файл з назвою
+                      <span class="accent-2">index_6_2.html</span> та задати
+                      структуру сайту
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати заголовок 1-го рівня з текстом:
+                      <span class="accent-2">Мої улюблені речі</span>. Зробити
+                      так, щоб заголовок був по центру сторінки
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати заголовок 2-го рівня з текстом:
+                      <span class="accent-2">Улюблена їжа</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Створити маркований список. Додати в нього 5 елементів з
+                      текстом: <span class="accent-2">Піца</span>,
+                      <span class="accent-2">Гамбургер</span>,
+                      <span class="accent-2">Спагеті</span>,
+                      <span class="accent-2">Морозиво</span>,
+                      <span class="accent-2">Фрукти</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Змінити тип списку на <span class="accent-2">circle</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати заголовок 2-го рівня з текстом:
+                      <span class="accent-2">Улюблені ігри</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Створити маркований список. Додати елементи з текстом:
+                      <span class="accent-2">Minecraft</span>,
+                      <span class="accent-2">Roblox</span>,
+                      <span class="accent-2">Among Us</span>,
+                      <span class="accent-2">Mario Kart</span>,
+                      <span class="accent-2">Fortnite</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Додати заголовок 2-го рівня з текстом:
+                      <span class="accent-2">Улюблені шкільні предмети</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Створити нумерований список. Додати елементи з текстом:
+                      <span class="accent-2">Математика</span>,
+                      <span class="accent-2">Малювання</span>,
+                      <span class="accent-2">Фізкультура</span>,
+                      <span class="accent-2">Англійська</span>,
+                      <span class="accent-2">Програмування</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Змінити тип списку на
+                      <span class="accent-2">I</span> (великі римські цифри)
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Застосувати CSS стилі до таких тегів:
+                      <ul class="inner-list">
+                        <li>
+                          <span class="accent-2">body</span> { колір фону:
+                          <span class="accent-2">#cccfff</span>; шрифт:
+                          <span class="accent-2">Arial</span>; }
+                        </li>
+                        <li>
+                          <span class="accent-2">h1</span> { колір тексту:
+                          <span class="accent-2">blue</span>; розмір тексту:
+                          <span class="accent-2">36px</span>; }
+                        </li>
+                        <li>
+                          <span class="accent-2">h2</span> { колір тексту:
+                          <span class="accent-2">darkblue</span>; розмір тексту:
+                          <span class="accent-2">28px</span>; шрифт:
+                          <span class="accent-2">Georgia</span>; }
+                        </li>
+                        <li>
+                          <span class="accent-2">li</span> { жирність шрифту:
+                          <span class="accent-2">bold</span>; }
+                        </li>
+                      </ul>
+                    </span>
+                  </label>
+                </li>
+              </ol>
+
+              <div class="progress-container">
+                <div class="progress-bar">0%</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- *************** Частина 4 (Зображення) *************** -->
+      <div class="tab-content" id="tab-part4">
+        <!-- Теорія: Зображення -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Теорія: <span class="accent">Зображення</span></h2>
+          </div>
+          <div class="content">
+            <h3>Зображення</h3>
+            <p>...</p>
+            <pre><code id="" class="language-markup"></code></pre>
+            <img src="example_images/example_0#.png" alt="example #" />
+          </div>
+        </section>
+
+        <!-- Завдання 3 -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Завдання 3</h2>
+          </div>
+
+          <div class="content">
+            <h3>🌟 Очікуваний результат:</h3>
+            <img src="example_images/task_03.jpg" alt="Очікуваний результат" />
+
+            <h3>📃 План:</h3>
+
+            <div class="checklist-wrapper">
+              <ol class="checklist">
+                <li>
+                  <!-- Крок 1 -->
+                  <label><input type="checkbox" /><span>...</span></label>
+                </li>
+              </ol>
+
+              <div class="progress-container">
+                <div class="progress-bar">0%</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <button id="scrollTopBtn" title="Повернутися нагору">🚀</button>
+  </body>
+</html>
