@@ -753,19 +753,133 @@ text-align: right;</code></pre>
             <button type="button">▶</button>
             <h2>Теорія: <span class="accent">Зображення</span></h2>
           </div>
+
           <div class="content">
-            <h3>Зображення</h3>
-            <p>img</p>
-            <p>img width and height</p>
-            <p>border</p>
-            <p>border-radius</p>
-            <p>background-image</p>
-            <p>background-repeat</p>
-            <p>background-size</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <p>
+              Зображення роблять сайт яскравішим і допомагають краще пояснити
+              ідеї. Вони вставляються за допомогою тега
+              <span class="accent">&lt;img&gt;</span>
+              (image — зображення).
+            </p>
+
+            <h3 id="img-tag">🖼️ Тег: <span class="accent">img</span></h3>
+            <p>
+              Тег <span class="accent">&lt;img&gt;</span> самозакривний
+              (одинарний) і обов’язково містить атрибут
+              <span class="accent">src</span> — шлях до файлу (каже комп'ютеру
+              звідки взяти картинку), та <span class="accent">alt</span> — опис
+              зображення, якщо воно не завантажиться.
+            </p>
+            <pre><code class="language-markup">&lt;img src="images/cat.jpg" alt="Милий кіт" /&gt;</code></pre>
+
+            <h3 id="img-size">
+              📏 Розмір: <span class="accent">width</span> і
+              <span class="accent">height</span>
+            </h3>
+            <p>
+              Атрибути <span class="accent">width</span> і
+              <span class="accent">height</span>
+              задають ширину та висоту зображення у пікселях.
+            </p>
+            <pre><code class="language-markup">&lt;img src="images/cat.jpg" width="200" height="150" /&gt;</code></pre>
+            <p>Ці ж властивості можна змінювати і через CSS:</p>
+            <pre><code class="language-css">img {
+  width: 200px;
+  height: 150px;
+}</code></pre>
+            <p>
+              Якщо задати лише ширину, висота визначається автоматично, і
+              навпаки.
+            </p>
+
+            <h3 id="img-border">
+              🪐 Рамка: <span class="accent">border</span>
+            </h3>
+            <p>
+              Щоб додати рамку навколо зображення, використовують властивість
+              <span class="accent">border</span>. Значення цієї властивості
+              складається з трьох частин: товщина рамки, її тип та колір. Типи
+              рамок можуть бути такими: solid, double, dashed, dotted, inset,
+              outset, groove, ridge.
+            </p>
+            <pre><code class="language-css">img {
+  border: 3px solid black;
+}</code></pre>
+
+            <h3 id="img-radius">
+              🌕 Закруглені кути: <span class="accent">border-radius</span>
+            </h3>
+            <p>
+              Властивість <span class="accent">border-radius</span> дозволяє
+              закруглити кути або зробити зображення круглим.
+            </p>
+            <pre><code class="language-css">img {
+  border-radius: 20px; /* м’яке закруглення */
+}</code></pre>
+            <pre><code class="language-css">img {
+  border-radius: 50%; /* коло */
+}</code></pre>
+
+            <h3 id="background-image">
+              🌈 Фонове зображення: <span class="accent">background-image</span>
+            </h3>
+            <p>
+              Фонове зображення додається до будь-якого елемента (наприклад, ,
+              <span class="accent">body</span>) за допомогою CSS-властивості:
+            </p>
+            <pre><code class="language-css">body {
+  background-image: url("images/space.jpg");
+}</code></pre>
+
+            <h3 id="background-repeat">
+              🔁 Повторення: <span class="accent">background-repeat</span>
+            </h3>
+            <p>
+              За замовчуванням фонове зображення повторюється, але це можна
+              змінити:
+            </p>
+            <pre><code class="language-css">div {
+  background-repeat: no-repeat; /* не повторювати */
+}</code></pre>
+
+            <h3 id="background-size">
+              🌍 Розмір: <span class="accent">background-size</span>
+            </h3>
+            <p>Визначає, як зображення масштабуватиметься у фоні.</p>
+            <pre><code class="language-css">div {
+  background-size: cover;   /* заповнює весь елемент */
+  background-position: center; /* центрує зображення */
+}</code></pre>
+            <p>
+              Властивість <span class="accent">background-size</span> визначає,
+              як фонове зображення буде масштабуватись усередині елемента.
+              Найчастіше використовують такі значення:
+            </p>
+
+            <ul class="inner-list">
+              <li>
+                <span class="accent">cover</span> — зображення масштабуються
+                так, щоб повністю покрити елемент, навіть якщо частина буде
+                обрізана.
+              </li>
+              <li>
+                <span class="accent">contain</span> — зображення зменшується або
+                збільшується, щоб повністю вміститись усередині елемента, не
+                обрізаючись, але можуть залишитись порожні поля (фоновий колір
+                буде видно).
+              </li>
+            </ul>
+
+            <div class="img-container">
+              <img class="dashed" src="./example_images/space/nasa_06.jpg" />
+              <img class="double" src="./example_images/space/nasa_02.jpg" />
+              <img class="dotted" src="./example_images/space/nasa_03.jpg" />
+              <img class="outset" src="./example_images/space/nasa_04.jpg" />
+              <img src="./example_images/space/nasa_05.jpg" />
+            </div>
           </div>
         </section>
+        <!-- Теорія: Зображення -->
 
         <!-- Завдання 3 -->
         <section>
@@ -932,7 +1046,7 @@ text-align: right;</code></pre>
         <section>
           <div class="flex toggle-header">
             <button type="button">▶</button>
-            <h2><span class="accent">📸 Зображення для завантаження</span></h2>
+            <h2><span class="accent">Зображення для завантаження</span></h2>
           </div>
 
           <div class="content">
@@ -971,7 +1085,7 @@ text-align: right;</code></pre>
         <section>
           <div class="flex toggle-header">
             <button type="button">▶</button>
-            <h2><span class="accent">📝 Текст для копіювання</span></h2>
+            <h2><span class="accent">Текст для копіювання</span></h2>
           </div>
 
           <div class="content">
@@ -982,7 +1096,7 @@ text-align: right;</code></pre>
         <section>
           <div class="flex toggle-header">
             <button type="button">▶</button>
-            <h2><span class="accent">🧩 Усі необхідні HTML теги</span></h2>
+            <h2><span class="accent">Усі необхідні HTML теги</span></h2>
           </div>
 
           <div class="content">
@@ -1010,7 +1124,7 @@ text-align: right;</code></pre>
         <section>
           <div class="flex toggle-header">
             <button type="button">▶</button>
-            <h2><span class="accent">🎨 CSS стилі</span></h2>
+            <h2><span class="accent">CSS стилі</span></h2>
           </div>
 
           <div class="content">

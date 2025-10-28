@@ -120,12 +120,34 @@ img {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  padding: 5px;
 }
 
 .img-container img {
   height: 120px;
   display: inline;
   border: 2px solid var(--clr-borders);
+}
+
+img.dashed {
+  border: 4px dashed lightgreen;
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+}
+
+img.dotted {
+  border: 4px dotted lightpink;
+  border-radius: 50%;
+}
+
+img.double {
+  border: 7px double lightcoral;
+}
+
+img.outset {
+  border: 5px outset mediumslateblue;
+  height: 150px;
 }
 
 /* *******************************************************
