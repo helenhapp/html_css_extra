@@ -64,9 +64,9 @@ tabButtons.forEach((btn) => {
 
 // Коли сторінка повністю завантажена, додаємо клас .loaded до body
 // Це активує анімацію появи (opacity) у CSS
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});
+// window.addEventListener("load", () => {
+//   document.body.classList.add("loaded");
+// });
 
 // *******************************************************
 //  Progress bars
