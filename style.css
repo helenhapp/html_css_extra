@@ -427,5 +427,11 @@ input[type="checkbox"]:checked + span {
 
   img {
     width: 100%;
+    height: auto;
+  }
+
+  .img-container img {
+    width: 90%;
+    height: auto;
   }
 }

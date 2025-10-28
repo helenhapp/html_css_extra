@@ -221,49 +221,120 @@ LESSON 6
             <h2>Теорія: <span class="accent">Стилі</span></h2>
           </div>
           <div class="content">
-            <h3 id="hr-style-tag">
+            <h3 id="h3-style-tag">
               🌠 Додавання стилів: тег <span class="accent">style</span>
             </h3>
-            <p>За допомогою CSS можна змінювати зовнішній вигляд елементів.</p>
+            <p>
+              CSS — це мова, яка допомагає зробити сайт гарним: вибрати кольори,
+              розміри, шрифти, відстані тощо. Вона говорить браузеру, як саме
+              повинні виглядати елементи сторінки.
+            </p>
+            <p>
+              Код мовою CSS можна писати всередині тегу
+              <span class="accent">style</span>, який розміщують у середині тегу
+              <span class="accent">head</span> HTML-документа.
+            </p>
             <pre><code id="snippet9" class="language-markup"></code></pre>
 
-            <h3 id="hr-css-rules">👨‍🚀 Синтаксис CSS</h3>
-            <p>...</p>
-            <pre><code id="snippet11" class="language-markup"></code></pre>
+            <h3 id="h3-css-rules">👨‍🚀 Синтаксис CSS</h3>
+            <pre><code id="snippet11" class="language-css"></code></pre>
+            <p>
+              Селектор каже браузеру, до якого елемента на сторінці ми
+              застосовуємо стиль. Наприклад,
+              <span class="accent"> p {} </span>означає: "застосуй цей стиль до
+              всіх абзаців p".
+            </p>
+            <p>
+              Властивість визначає, що саме ми хочемо змінити в зовнішньому
+              вигляді елемента. Наприклад, колір фону або розмір шрифту.
+            </p>
+            <p>
+              Значення показує, як саме змінити цю властивість. Наприклад, якщо
+              змінюємо властивість колір, значення може бути: blue, darkgreen,
+              #E6FFE6 тощо, але не може бути чимось, що не є кольором.
+            </p>
+            <p>
+              Кожна пара
+              <span class="accent">властивість: значення;</span> закінчується
+              крапкою з комою, щоб браузер знав, де закінчується одне правило і
+              починається інше. Якщо її пропустити, стилі можуть не працювати!
+            </p>
+            <p>
+              Фігурні дужки <span class="accent">{}</span> - це межі для одного
+              конкретного блоку стилів, у яких записуються всі правила для
+              вибраного селектора.
+            </p>
 
-            <h3 id="hr-color">
+            <h3 id="h3-color">
               🌍 Властивість — колір тексту: <span class="accent">color</span>
             </h3>
             <p>
-              Щоб задати певному елементу стиль, потрібно використати тег style
-              всередині тегу head.
+              Визначає, якого кольору буде текст елемента. Можна вказати назву
+              кольору (red, blue), шістнадцятковий код (#ff0000) або формат
+              rgb().
             </p>
+            <pre><code class="language-css">color: blue;</code></pre>
 
-            <h3 id="hr-background">
+            <h3 id="h3-background">
               👽 Властивість — колір фону:
               <span class="accent">background-color</span>
             </h3>
-            <p>...</p>
+            <p>
+              Встановлює колір заднього фону елемента (тобто того, що за
+              текстом).
+            </p>
+            <pre><code class="language-css">background-color: black;</code></pre>
 
-            <h3 id="hr-font-size">
+            <h3 id="h3-font-size">
               🚀 Властивість — розмір тексту:
               <span class="accent">font-size</span>
             </h3>
-            <p>...</p>
+            <p>
+              Задає, наскільки великим буде текст. Вимірюється зазвичай у
+              пікселях (px).
+            </p>
+            <pre><code class="language-css">font-size: 20px;</code></pre>
 
-            <h3 id="hr-font-family">
+            <h3 id="h3-font-family">
               👾 Властивість — шрифт:
               <span class="accent">font-family</span>
             </h3>
-            <p>...</p>
+            <p>
+              Визначає, яким шрифтом написаний текст. Можна вказати кілька
+              шрифтів — якщо перший не знайдеться, використається наступний.
+            </p>
+            <pre><code class="language-css">font-family: Tahoma;</code></pre>
 
-            <h3 id="hr-font-weight">
+            <h3 id="h3-font-weight">
               🌆 Властивість — жирність шрифту:
               <span class="accent">font-weight</span>
             </h3>
-            <p>...</p>
+            <p>
+              Задає наскільки товстими будуть літери. Можна використовувати
+              значення: normal — звичайний шрифт bold — жирний, або числа: 100,
+              200, ..., 900 (більше число -> товстіший текст)
+            </p>
+            <pre><code class="language-css">font-weight: bold;
+font-weight: normal;</code></pre>
+
+            <h3 id="h3-text-align">
+              📐Властивість — вирівнювання тексту:
+              <span class="accent">text-align</span>
+            </h3>
+            <p>
+              Визначає, як текст розташований у рядку: зліва, справа чи по
+              центру.
+            </p>
+            <pre><code class="language-css">text-align: center;
+text-align: left;
+text-align: right;</code></pre>
+
+            <h3 id="h3-styles-example">⭐ Приклад</h3>
             <pre><code id="snippet10" class="language-markup"></code></pre>
-            <img src="example_images/example_08.png" alt="example 8" />
+            <p>До:</p>
+            <img src="example_images/styles_02.jpg" alt="example 8" />
+            <p>Після:</p>
+            <img src="example_images/styles_01.jpg" alt="example 8" />
           </div>
         </section>
 
@@ -411,25 +482,80 @@ LESSON 6
             <h2>Теорія: <span class="accent">Списки</span></h2>
           </div>
           <div class="content">
-            <h3>Марковані списки</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <p>
+              Списки допомагають упорядкувати інформацію, наприклад: перелік
+              покупок, кроків до завдання, Топ 5 речей тощо. Є два основні типи
+              списків: марковані та нумеровані.
+            </p>
 
-            <h3>Нумеровані списки</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <h3 id="lists-ul">
+              🌌 Марковані списки: <span class="accent">ul</span>
+            </h3>
+            <p>
+              <span class="accent">ul</span> означає unordered list
+              (невпорядований список) — немає порядкових номерів, лише маркери
+              (кружечки, квадратики).
+            </p>
+            <pre><code class="language-markup">&lt;ul&gt;&lt;/ul&gt;</code></pre>
 
-            <h3>Типи маркерів</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <h3 id="lists-ol">
+              🪐 Нумеровані списки: <span class="accent">ol</span>
+            </h3>
+            <p>
+              <span class="accent">ol</span> означає ordered list (впорядований
+              список) — елементи пронумеровані цифрами або буквами.
+            </p>
+            <pre><code class="language-markup">&lt;ol&gt;&lt;/ol&gt;</code></pre>
 
-            <h3>list-style</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <h3 id="lists-li">
+              🛸 Елементи списку: <span class="accent">li</span>
+            </h3>
+            <p>
+              Кожен пункт списку записується в тегах
+              <span class="accent">&lt;li&gt;...&lt;/li&gt;</span>
+              — list item (елемент списку). Усередині цих тегів розміщується
+              текст або інші елементи.
+            </p>
+            <pre><code class="language-markup">&lt;ul&gt;
+  &lt;li&gt;Eлемент 1&lt;/li&gt;
+  &lt;li&gt;Eлемент 2&lt;/li&gt;
+  &lt;li&gt;Eлемент 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Eлемент 1&lt;/li&gt;
+  &lt;li&gt;Eлемент 2&lt;/li&gt;
+  &lt;li&gt;Eлемент 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            <img src="example_images/tags_05.jpg" />
+
+            <h3 id="lists-type">
+              👾 Типи маркерів: <span class="accent">type=""</span>
+            </h3>
+            <p>
+              Вигляд маркерів або номерів списку можна змінити, додавши атрибут
+              <span class="accent">type=""</span> до тегу
+              <span class="accent">ol</span> або <span class="accent">ul</span>.
+            </p>
+            <pre><code class="language-markup">&lt;ul type="circle"&gt;...&lt;/ul&gt;
+&lt;ol type="I"&gt;...&lt;/0l&gt;</code></pre>
+            <p>Типи маркерів для <span class="accent">ul</span>:</p>
+            <img src="example_images/ul-markers.jpg" alt="example" />
+            <p>Типи маркерів для <span class="accent">ol</span>:</p>
+            <img src="example_images/ol-markers.jpg" alt="example" />
+
+            <h3 id="lists-type">
+              <span class="accent">🌠 list-style: none;</span>
+            </h3>
+            <p>
+              ноді потрібно, щоб список не мав жодних позначок — ні кружечків,
+              ні номерів. Для цього використовують CSS-властивість:
+              <span class="accent">list-style: none;</span>
+            </p>
+            <pre><code class="language-css"></code>ul {
+  list-style: none;
+}</pre>
+            <img src="example_images/tags_06.jpg" />
           </div>
         </section>
 
@@ -440,20 +566,31 @@ LESSON 6
             <h2>Теорія: <span class="accent">Лінії</span></h2>
           </div>
           <div class="content">
-            <h3>hr</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <h3 id="hr">
+              🌃 Горизонтальна лінія: тег <span class="accent">&lt;hr&gt;</span>
+            </h3>
+            <p>
+              Тег <span class="accent">hr</span> використовується для вставлення
+              горизонтальної лінії на сторінці. Не потребує закривального тегу
+              (&lt;/hr&gt; не пишеться)
+            </p>
+            <pre><code id="" class="language-markup">&lt;hr&gt;</code></pre>
+            <img src="example_images/hr_01.jpg" />
 
-            <h3>width</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <h3 id="width">🌙 Ширина: <span class="accent">width</span></h3>
+            <p>
+              Визначає, наскільки довгим буде елемент по горизонталі. Може
+              задаватися у пікселях (px) або у відсотках (%).
+            </p>
 
-            <h3>height</h3>
-            <p>...</p>
-            <pre><code id="" class="language-markup"></code></pre>
-            <img src="example_images/example_0#.png" alt="example #" />
+            <h3 id="height">🍕 Висота: <span class="accent">height</span></h3>
+            <p>Визначає, наскільки високим буде елемент по вертикалі.</p>
+            <pre><code id="" class="language-markup">hr {
+  width: 50%;
+  height: 5px;
+  background-color: blue;
+}</code></pre>
+            <img src="example_images/hr_02.jpg" />
           </div>
         </section>
 
@@ -793,16 +930,13 @@ LESSON 6
 
       <!-- *************** Частина 5 (д/з) *************** -->
       <div class="tab-content" id="tab-part5">
-        <!-- Завдання 4 -->
         <section>
           <div class="flex toggle-header">
             <button type="button">▶</button>
-            <h2><span class="accent">Матеріали до завдання</span></h2>
+            <h2><span class="accent">📸 Зображення для завантаження</span></h2>
           </div>
 
           <div class="content">
-            <h3 id="h3-task4-images">🖼 Зображення для завантаження</h3>
-
             <div class="img-container">
               <img src="./example_images/dogs/1-бордер-колі.jpg" alt="" />
               <img src="./example_images/dogs/1-пудель.jpg" alt="" />
@@ -832,48 +966,99 @@ LESSON 6
               <img src="./example_images/dogs/3-сенбернар.jpg" alt="" />
               <img src="./example_images/dogs/3-мастиф.jpg" alt="" />
             </div>
+          </div>
+        </section>
 
-            <h3 id="h3-task4-tags">🧩 Усі необхідні HTML теги</h3>
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2><span class="accent">📝 Текст для копіювання</span></h2>
+          </div>
 
+          <div class="content">
+            <pre><code id="snippet23" class="language-markup"></code></pre>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2><span class="accent">🧩 Усі необхідні HTML теги</span></h2>
+          </div>
+
+          <div class="content">
             <p>структура сторінки</p>
             <pre><code id="snippet12" class="language-markup"></code></pre>
 
             <p>заголовки</p>
             <pre><code id="snippet13" class="language-markup"></code></pre>
+            <img src="example_images/tags_01.jpg" alt="h1, h2" />
 
             <p>списки</p>
             <pre><code id="snippet14" class="language-markup"></code></pre>
+            <img src="example_images/tags_02.jpg" alt="ul, ol" />
 
             <p>зображення</p>
             <pre><code id="snippet15" class="language-markup"></code></pre>
+            <img src="example_images/tags_03.jpg" alt="img" />
 
             <p>форматування тексту</p>
             <pre><code id="snippet16" class="language-markup"></code></pre>
+            <img src="example_images/tags_04.jpg" alt="b, i, u" />
+          </div>
+        </section>
 
-            <h3 id="h3-task4-styles">🎨 CSS стилі</h3>
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2><span class="accent">🎨 CSS стилі</span></h2>
+          </div>
 
-            <p><span class="accent">синтаксис CSS</span></p>
+          <div class="content">
+            <h3 id="hr-task4-celectors">CSS селектори</h3>
+            <p>
+              <span class="accent"
+                >CSS селектори, необхідні для цього завдання</span
+              >
+            </p>
             <pre><code id="snippet17" class="language-css"></code></pre>
 
-            <p><span class="accent">height</span> — висота</p>
+            <h3 id="hr-task4-height">Висота</h3>
+            <p>
+              <span class="accent">height</span> — висота елемента (наприклад,
+              картинки)
+            </p>
             <pre><code id="snippet18" class="language-css"></code></pre>
 
+            <h3 id="hr-task4-border">Рамка</h3>
             <p><span class="accent">border</span> — рамка (навколо елемента)</p>
-            <p><span class="accent">border-bottom</span> — рамка лише знизу</p>
+            <p>
+              <span class="accent">border-bottom</span> — частина рамки лише
+              знизу елемента
+            </p>
             <pre><code id="snippet19" class="language-css"></code></pre>
 
+            <h3 id="hr-task4-color">Колір</h3>
             <p><span class="accent">color</span> — колір тексту</p>
             <p><span class="accent">background-color</span> — колір фону</p>
             <pre><code id="snippet20" class="language-css"></code></pre>
 
+            <h3 id="hr-task4-text-align">Вирівнювання</h3>
             <p>
               <span class="accent">text-align</span> — вирівнювання тексту
               (left, right, center)
             </p>
             <pre><code id="snippet21" class="language-css"></code></pre>
 
-            <p><span class="accent">font-family</span> — шрифт</p>
-            <p><span class="accent">font-size</span> — розмір шрифту</p>
+            <h3 id="hr-task4-font">Шрифт</h3>
+            <p>
+              <span class="accent">font-family</span> — тип шрифту (сімейство
+              шрифтів)
+            </p>
+            <p>
+              <span class="accent">font-size</span> — розмір шрифту (задається в
+              px)
+            </p>
             <p>
               <span class="accent">font-weight</span> — жирність шрифту (bold,
               normal)
@@ -882,6 +1067,7 @@ LESSON 6
           </div>
         </section>
 
+        <!-- Завдання 4 -->
         <section>
           <div class="flex toggle-header">
             <button type="button">▶</button>
@@ -1082,8 +1268,8 @@ LESSON 6
                   <label>
                     <input type="checkbox" />
                     <span
-                      >Змінити тип 2-го списку на "circle". Змінити тип 3-го
-                      списку на "a".</span
+                      >Змінити тип 2-го списку на "circle", тип 3-го списку на
+                      "a".</span
                     ></label
                   >
                 </li>
@@ -1110,36 +1296,7 @@ LESSON 6
                     <input type="checkbox" />
                     <span
                       >Додати під кожним списком 5 відповідних картинок (15
-                      тегів <span class="accent">img</span>):
-                      <ul class="inner-list">
-                        <li><span class="accent-2">1-бордер-колі.jpg</span></li>
-                        <li><span class="accent-2">1-пудель.jpg</span></li>
-                        <li><span class="accent-2">1-вівчарка.jpg</span></li>
-                        <li><span class="accent-2">1-ретривер.jpg</span></li>
-                        <li><span class="accent-2">1-доберман.jpg</span></li>
-                        <li><span class="accent-2">2-такса.jpg</span></li>
-                        <li><span class="accent-2">2-шиба-іну.jpg</span></li>
-                        <li><span class="accent-2">2-коргі.jpg</span></li>
-                        <li>
-                          <span class="accent-2">2-померанський-шпіц.jpg</span>
-                        </li>
-                        <li><span class="accent-2">2-хаскі.jpg</span></li>
-                        <li>
-                          <span class="accent-2"
-                            >3-ірландський-вовкодав.jpg</span
-                          >
-                        </li>
-                        <li>
-                          <span class="accent-2">3-німецький-дог.jpg</span>
-                        </li>
-                        <li>
-                          <span class="accent-2"
-                            >3-бернський-зененхунд.jpg</span
-                          >
-                        </li>
-                        <li><span class="accent-2">3-сенбернар.jpg</span></li>
-                        <li><span class="accent-2">3-мастиф.jpg</span></li>
-                      </ul></span
+                      тегів <span class="accent">img</span>)</span
                     ></label
                   >
                 </li>
