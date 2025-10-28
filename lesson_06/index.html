@@ -79,6 +79,7 @@ LESSON 6
         <button class="tab-btn" data-tab="part2">Форматування тексту</button>
         <button class="tab-btn" data-tab="part3">Списки</button>
         <button class="tab-btn" data-tab="part4">Зображення</button>
+        <button class="tab-btn" data-tab="part5">Додаткове завдання</button>
       </nav>
     </header>
 
@@ -639,15 +640,521 @@ LESSON 6
 
           <div class="content">
             <h3>🌟 Очікуваний результат:</h3>
-            <img src="example_images/task_03.jpg" alt="Очікуваний результат" />
+            <img src="example_images/task_03.png" alt="Очікуваний результат" />
+
+            <h3>📃 План:</h3>
+
+            <div class="checklist-wrapper">
+              <ol class="checklist">
+                <!-- Крок 1 -->
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Завантажити усі зображення тварин в папку
+                      <span class="accent">images</span></span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 2 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      Створити новий файл з назвою
+                      <span class="accent-2">index_6_3.html</span> та задати
+                      структуру сайту
+                    </span>
+                  </label>
+                </li>
+
+                <!-- Крок 3 -->
+                <li>
+                  <label>
+                    <input type="checkbox" /><span
+                      >Додати заголовок 1-го рівня з текстом:
+                      <span class="accent-2">Свійські тварини</span>.
+                    </span>
+                  </label>
+                </li>
+
+                <!-- Крок 4 -->
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Додати 10 зображень, завантажених раніше (теги
+                      <span class="accent">img</span>)
+                    </span></label
+                  >
+                </li>
+
+                <!-- Крок 5 -->
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Використати тег
+                      <span class="accent">&lt;br&gt;</span> щоб розташувати
+                      зображення у кілька рядків</span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 6 -->
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >CSS стилі для тегу <span class="accent">body</span>:
+                      <ul class="inner-list">
+                        <li>
+                          фон:
+                          <span class="accent-2"
+                            >ulr(<a
+                              href="https://images.unsplash.com/photo-1533460004989-cef01064af7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+                              target="_blank"
+                              ><i>посилання на картинку для фону</i></a
+                            >)</span
+                          >;
+                        </li>
+                        <li>
+                          повторення фону:
+                          <span class="accent-2">no-repeat</span>;
+                        </li>
+                        <li>
+                          розмір фону: <span class="accent-2">cover</span>;
+                        </li>
+                        <li>
+                          вирівнювання тексту:
+                          <span class="accent-2">center</span>;
+                        </li>
+                      </ul>
+                    </span></label
+                  >
+                </li>
+
+                <!-- Крок 7 -->
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >CSS стилі для тегу <span class="accent">h1</span>:
+                      <ul class="inner-list">
+                        <li>колір: <span class="accent-2">darkgreen</span>;</li>
+                        <li>
+                          розмір тексту: <span class="accent-2">34px</span>;
+                        </li>
+                      </ul>
+                    </span></label
+                  >
+                </li>
+
+                <!-- Крок 8 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>
+                      CSS стилі для тегу <span class="accent">img</span>:
+                      <ul class="inner-list">
+                        <li>
+                          висота:
+                          <span class="accent-2">140px</span>;
+                        </li>
+                        <li>
+                          рамка: <span class="accent-2">4px solid black</span>;
+                        </li>
+                        <li>
+                          заокруглення кутів рамки:
+                          <span class="accent-2">50px</span>;
+                        </li>
+                      </ul>
+                    </span>
+                  </label>
+                </li>
+              </ol>
+
+              <div class="progress-container">
+                <div class="progress-bar">0%</div>
+              </div>
+            </div>
+
+            <div class="img-container">
+              <img src="./example_images/animals/Вівця.jpg" alt="Вівця" />
+              <img src="./example_images/animals/Гуска.jpg" alt="Гуска" />
+              <img src="./example_images/animals/Качка.jpg" alt="Качка" />
+              <img src="./example_images/animals/Коза.jpg" alt="Коза" />
+              <img src="./example_images/animals/Корова.jpg" alt="Корова" />
+              <img src="./example_images/animals/Кролик.jpg" alt="Кролик" />
+              <img src="./example_images/animals/Курка.jpg" alt="Курка" />
+              <img src="./example_images/animals/Кінь.jpg" alt="Кінь" />
+              <img src="./example_images/animals/Свиня.jpg" alt="Свиня" />
+              <img src="./example_images/animals/Індик.jpg" alt="Індик" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- *************** Частина 5 (д/з) *************** -->
+      <div class="tab-content" id="tab-part5">
+        <!-- Завдання 4 -->
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2><span class="accent">Матеріали до завдання</span></h2>
+          </div>
+
+          <div class="content">
+            <h3 id="h3-task4-images">🖼 Зображення для завантаження</h3>
+
+            <div class="img-container">
+              <img src="./example_images/dogs/1-бордер-колі.jpg" alt="" />
+              <img src="./example_images/dogs/1-пудель.jpg" alt="" />
+              <img src="./example_images/dogs/1-вівчарка.jpg" alt="" />
+              <img src="./example_images/dogs/1-ретривер.jpg" alt="" />
+              <img src="./example_images/dogs/1-доберман.jpg" alt="" />
+            </div>
+
+            <div class="img-container">
+              <img src="./example_images/dogs/2-такса.jpg" alt="" />
+              <img src="./example_images/dogs/2-шиба-іну.jpg" alt="" />
+              <img src="./example_images/dogs/2-коргі.jpg" alt="" />
+              <img src="./example_images/dogs/2-померанський-шпіц.jpg" alt="" />
+              <img src="./example_images/dogs/2-хаскі.jpg" alt="" />
+            </div>
+
+            <div class="img-container">
+              <img
+                src="./example_images/dogs/3-ірландський-вовкодав.jpg"
+                alt=""
+              />
+              <img src="./example_images/dogs/3-німецький-дог.jpg" alt="" />
+              <img
+                src="./example_images/dogs/3-бернський-зененхунд.jpg"
+                alt=""
+              />
+              <img src="./example_images/dogs/3-сенбернар.jpg" alt="" />
+              <img src="./example_images/dogs/3-мастиф.jpg" alt="" />
+            </div>
+
+            <h3 id="h3-task4-tags">🧩 Усі необхідні HTML теги</h3>
+
+            <p>структура сторінки</p>
+            <pre><code id="snippet12" class="language-markup"></code></pre>
+
+            <p>заголовки</p>
+            <pre><code id="snippet13" class="language-markup"></code></pre>
+
+            <p>списки</p>
+            <pre><code id="snippet14" class="language-markup"></code></pre>
+
+            <p>зображення</p>
+            <pre><code id="snippet15" class="language-markup"></code></pre>
+
+            <p>форматування тексту</p>
+            <pre><code id="snippet16" class="language-markup"></code></pre>
+
+            <h3 id="h3-task4-styles">🎨 CSS стилі</h3>
+
+            <p><span class="accent">синтаксис CSS</span></p>
+            <pre><code id="snippet17" class="language-css"></code></pre>
+
+            <p><span class="accent">height</span> — висота</p>
+            <pre><code id="snippet18" class="language-css"></code></pre>
+
+            <p><span class="accent">border</span> — рамка (навколо елемента)</p>
+            <p><span class="accent">border-bottom</span> — рамка лише знизу</p>
+            <pre><code id="snippet19" class="language-css"></code></pre>
+
+            <p><span class="accent">color</span> — колір тексту</p>
+            <p><span class="accent">background-color</span> — колір фону</p>
+            <pre><code id="snippet20" class="language-css"></code></pre>
+
+            <p>
+              <span class="accent">text-align</span> — вирівнювання тексту
+              (left, right, center)
+            </p>
+            <pre><code id="snippet21" class="language-css"></code></pre>
+
+            <p><span class="accent">font-family</span> — шрифт</p>
+            <p><span class="accent">font-size</span> — розмір шрифту</p>
+            <p>
+              <span class="accent">font-weight</span> — жирність шрифту (bold,
+              normal)
+            </p>
+            <pre><code id="snippet22" class="language-css"></code></pre>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex toggle-header">
+            <button type="button">▶</button>
+            <h2>Завдання 4</h2>
+          </div>
+
+          <div class="content">
+            <h3>🌟 Очікуваний результат:</h3>
+            <img
+              src="example_images/dog_website_screenshot.png"
+              alt="Очікуваний результат"
+            />
 
             <h3>📃 План:</h3>
 
             <div class="checklist-wrapper">
               <ol class="checklist">
                 <li>
-                  <!-- Крок 1 -->
-                  <label><input type="checkbox" /><span>...</span></label>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Створити файл з назвою
+                      <span class="accent-2">dogs.html</span>.</span
+                    ></label
+                  >
+                </li>
+
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Зберегти всі необхідні картинки в свою папку (див.
+                      <span class="accent">Матеріали до завдання</span>).</span
+                    ></label
+                  >
+                </li>
+
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Написати основну структуру сайту (<span class="accent"
+                        >html, head, body, style</span
+                      >).</span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 1 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >CSS стилі для тегу <span class="accent">body</span>:
+                      <ul class="inner-list">
+                        <li>
+                          колір фону: <span class="accent-2">seagreen</span>;
+                        </li>
+                        <li>
+                          колір тексту: <span class="accent-2">white</span>;
+                        </li>
+                        <li>шрифт: <span class="accent-2">monospace</span>;</li>
+                        <li>
+                          розмір шрифту: <span class="accent-2">20px</span>;
+                        </li>
+                      </ul>
+                    </span></label
+                  >
+                </li>
+
+                <!-- Крок 2 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Додати заголовок 1 рівня з текстом:
+                      <span class="accent-2"
+                        >🐩 🐕‍🦺 🐕 Топ 5 порід собак</span
+                      ></span
+                    ></label
+                  >
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >CSS стилі для заголовка 1 рівня:
+                      <ul class="inner-list">
+                        <li>
+                          вирівнювання тексту:
+                          <span class="accent-2">center</span>;
+                        </li>
+                        <li>
+                          колір тексту: <span class="accent-2">pink</span>;
+                        </li>
+                        <li>
+                          нижня рамка:
+                          <span class="accent-2">5px dashed darkgreen</span>;
+                        </li>
+                      </ul></span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 3 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Додати три заголовки 2 рівня з текстом:
+                      <ul class="inner-list">
+                        <li>
+                          <span class="accent-2"
+                            >🌷 Топ 5 найрозумніших порід собак</span
+                          >
+                        </li>
+                        <li>
+                          <span class="accent-2"
+                            >🌼 Топ 5 наймиліших порід собак</span
+                          >
+                        </li>
+                        <li>
+                          <span class="accent-2"
+                            >🌻 Топ 5 найбільших порід собак</span
+                          >
+                        </li>
+                      </ul></span
+                    ></label
+                  >
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >CSS стилі для заголовків 2 рівня:
+                      <ul class="inner-list">
+                        <li>
+                          колір тексту:
+                          <span class="accent-2">lemonchiffon</span>;
+                        </li>
+                        <li>
+                          жирність тексту: <span class="accent-2">normal</span>;
+                        </li>
+                      </ul>
+                    </span></label
+                  >
+                </li>
+
+                <!-- Крок 4 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Відформатувати заголовки 2 рівня (теги
+                      <span class="accent">b, i, u</span>)</span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 5 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Створити три списки:
+                      <ul class="inner-list">
+                        <li>
+                          нумерований з елементами:
+                          <span class="accent-2">Бордер-колі</span>,
+                          <span class="accent-2">Пудель</span>,
+                          <span class="accent-2">Німецька вівчарка</span>,
+                          <span class="accent-2">Золотистий ретривер</span>,
+                          <span class="accent-2">Доберман</span>
+                        </li>
+                        <li>
+                          маркований з елементами:
+                          <span class="accent-2">Такса</span>,
+                          <span class="accent-2">Шиба-іну</span>,
+                          <span class="accent-2">Валлійський коргі</span>,
+                          <span class="accent-2">Померанський шпіц</span>,
+                          <span class="accent-2">Хаскі</span>
+                        </li>
+                        <li>
+                          нумерований з елементами:
+                          <span class="accent-2">Ірландський вовкодав</span>,
+                          <span class="accent-2">Німецький дог</span>,
+                          <span class="accent-2">Бернський зененхунд</span>,
+                          <span class="accent-2">Сенбернар</span>,
+                          <span class="accent-2">Мастиф</span>
+                        </li>
+                      </ul></span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 6 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Змінити тип 2-го списку на "circle". Змінити тип 3-го
+                      списку на "a".</span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 7 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >CSS стилі для картинок:
+                      <ul class="inner-list">
+                        <li>висота: <span class="accent-2">190px</span>;</li>
+                        <li>
+                          рамка: <span class="accent-2">3px solid white</span>;
+                        </li>
+                      </ul></span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 8 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Додати під кожним списком 5 відповідних картинок (15
+                      тегів <span class="accent">img</span>):
+                      <ul class="inner-list">
+                        <li><span class="accent-2">1-бордер-колі.jpg</span></li>
+                        <li><span class="accent-2">1-пудель.jpg</span></li>
+                        <li><span class="accent-2">1-вівчарка.jpg</span></li>
+                        <li><span class="accent-2">1-ретривер.jpg</span></li>
+                        <li><span class="accent-2">1-доберман.jpg</span></li>
+                        <li><span class="accent-2">2-такса.jpg</span></li>
+                        <li><span class="accent-2">2-шиба-іну.jpg</span></li>
+                        <li><span class="accent-2">2-коргі.jpg</span></li>
+                        <li>
+                          <span class="accent-2">2-померанський-шпіц.jpg</span>
+                        </li>
+                        <li><span class="accent-2">2-хаскі.jpg</span></li>
+                        <li>
+                          <span class="accent-2"
+                            >3-ірландський-вовкодав.jpg</span
+                          >
+                        </li>
+                        <li>
+                          <span class="accent-2">3-німецький-дог.jpg</span>
+                        </li>
+                        <li>
+                          <span class="accent-2"
+                            >3-бернський-зененхунд.jpg</span
+                          >
+                        </li>
+                        <li><span class="accent-2">3-сенбернар.jpg</span></li>
+                        <li><span class="accent-2">3-мастиф.jpg</span></li>
+                      </ul></span
+                    ></label
+                  >
+                </li>
+
+                <!-- Крок 9 -->
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span
+                      >Додати до стилів цей рядок:
+                      <span class="accent-2"
+                        >img:hover { transform: scale(1.1); }</span
+                      ></span
+                    ></label
+                  >
                 </li>
               </ol>
 

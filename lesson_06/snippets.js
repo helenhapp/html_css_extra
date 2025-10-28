@@ -64,6 +64,80 @@ const snippets = {
   властивість1: значення1;
   властивість2: значення2;
 }`,
+
+  // структура сайту
+  snippet12: `<html>
+  <head>
+    <style>
+    </style>
+  </head>
+
+  <body>
+  </body>
+</html>`,
+
+  // заголовки
+  snippet13: `<h1>Заголовок 1 рівня</h1>
+<h2>Заголовок 2 рівня</h2>`,
+
+  // списки
+  snippet14: `<!-- Нумерований список -->
+<ol type="тип нумерації">
+  <li>1-й елемент списку</li>
+  <li>2-й елемент списку</li>
+  <li>3-й елемент списку</li>
+</ol>
+
+<!-- Маркований список -->
+<ul type="тип маркерів">
+  <li>1-й елемент списку</li>
+  <li>2-й елемент списку</li>
+  <li>3-й елемент списку</li>
+</ul>`,
+
+  // картинки
+  snippet15: `<img src="посилання" alt="">`,
+
+  // форматування тексту
+  snippet16: `<b>Жирний текст</b>
+<i>Похилий текст</i>
+<u>Підкреслений текст</u>`,
+
+  // CSS
+  snippet17: `селектор {
+  властивість: значення;
+  властивість: значення;
+}`,
+
+  snippet18: `img {
+  height: 190px;
+}`,
+
+  snippet19: `h1 {
+  border-bottom: 5px dashed darkgreen;
+}
+  
+img {
+  border: 3px solid white;
+}`,
+
+  snippet20: `body {
+  color: white;
+  background-color: seagreen;  
+}`,
+
+  snippet21: `h1 {
+  text-align: center; 
+}`,
+
+  snippet22: `body {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+h2 {
+  font-weight: normal;
+}`,
 };
 
 Object.entries(snippets).forEach(([id, code]) => {

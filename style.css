@@ -95,6 +95,15 @@ h3,
   font-weight: 500;
 }
 
+a {
+  color: var(--clr-title);
+  font-weight: normal;
+}
+
+a:hover {
+  color: var(--clr-accent);
+}
+
 /* *******************************************************
    Зображення
 ********************************************************* */
@@ -102,6 +111,21 @@ img {
   border: 2px inset black;
   display: block;
   max-width: 100%;
+}
+
+.img-container {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.img-container img {
+  height: 120px;
+  display: inline;
+  border: 2px solid var(--clr-borders);
 }
 
 /* *******************************************************
