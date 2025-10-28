@@ -20,11 +20,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* html,
-body {
+html {
   background-color: black;
   color: rgb(232, 239, 228);
-} */
+}
 
 /* *******************************************************
    Основні стилі
