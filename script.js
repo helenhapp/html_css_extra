@@ -151,3 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+window.addEventListener("resize", () => {
+  document.querySelectorAll(".toggle-header.active").forEach((header) => {
+    const content = header.nextElementSibling;
+    content.style.maxHeight = content.scrollHeight + "px";
+  });
+});
