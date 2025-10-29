@@ -2,32 +2,83 @@
 //  Розкривні заголовки (Toggle Headers)
 // *******************************************************
 
-// Знаходимо всі елементи з класом .toggle-header
+// // Знаходимо всі елементи з класом .toggle-header
+// document.querySelectorAll(".toggle-header").forEach((header) => {
+//   const content = header.nextElementSibling; // Наступний елемент після заголовка (прихований блок)
+
+//   header.addEventListener("click", () => {
+//     const isActive = header.classList.toggle("active"); // Додаємо або забираємо клас "active"
+
+//     if (isActive) {
+//       // Якщо розкриваємо блок
+//       content.style.display = "block"; // Тимчасово показуємо для обчислення висоти
+//       const fullHeight = content.scrollHeight + "px"; // Отримуємо повну висоту контенту
+
+//       // Анімуємо розкриття
+//       requestAnimationFrame(() => {
+//         content.style.maxHeight = fullHeight;
+//         content.style.opacity = "1";
+//       });
+//     } else {
+//       // Якщо приховуємо блок
+//       content.style.maxHeight = content.scrollHeight + "px"; // Встановлюємо поточну висоту
+//       content.style.opacity = "0"; // Починаємо затемнення
+
+//       // Потім плавно згортаємо блок
+//       requestAnimationFrame(() => {
+//         content.style.maxHeight = "0";
+//       });
+//     }
+//   });
+// });
+
+// *******************************************************
+//  Розкривні заголовки (Toggle Headers) з ResizeObserver
+// *******************************************************
+
 document.querySelectorAll(".toggle-header").forEach((header) => {
-  const content = header.nextElementSibling; // Наступний елемент після заголовка (прихований блок)
+  const content = header.nextElementSibling; // прихований блок
+  let ro = null; // спостерігач для автооновлення висоти
 
   header.addEventListener("click", () => {
-    const isActive = header.classList.toggle("active"); // Додаємо або забираємо клас "active"
+    const isActive = header.classList.toggle("active");
 
     if (isActive) {
-      // Якщо розкриваємо блок
-      content.style.display = "block"; // Тимчасово показуємо для обчислення висоти
-      const fullHeight = content.scrollHeight + "px"; // Отримуємо повну висоту контенту
+      // Показуємо блок перед обчисленням висоти
+      content.style.display = "block";
+      content.style.opacity = "1";
 
-      // Анімуємо розкриття
+      // спочатку обнуляємо висоту, щоб запустити transition
+      content.style.maxHeight = "0";
+      // чекаємо наступний кадр, щоб зміна max-height анімувалася
       requestAnimationFrame(() => {
-        content.style.maxHeight = fullHeight;
-        content.style.opacity = "1";
+        content.style.maxHeight = content.scrollHeight + "px";
       });
-    } else {
-      // Якщо приховуємо блок
-      content.style.maxHeight = content.scrollHeight + "px"; // Встановлюємо поточну висоту
-      content.style.opacity = "0"; // Починаємо затемнення
 
-      // Потім плавно згортаємо блок
+      // створюємо ResizeObserver, щоб автоматично оновлювати висоту при зміні розмірів
+      ro = new ResizeObserver(() => {
+        content.style.maxHeight = content.scrollHeight + "px";
+      });
+      ro.observe(content);
+    } else {
+      // Приховуємо блок плавно
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.opacity = "0";
+
       requestAnimationFrame(() => {
         content.style.maxHeight = "0";
       });
+
+      // після завершення анімації повністю приховуємо блок
+      setTimeout(() => {
+        content.style.display = "none";
+      }, 350);
+
+      // вимикаємо спостерігача
+      if (ro) {
+        ro.disconnect();
+        ro = null;
+      }
     }
   });
 });
@@ -152,9 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-window.addEventListener("resize", () => {
-  document.querySelectorAll(".toggle-header.active").forEach((header) => {
-    const content = header.nextElementSibling;
-    content.style.maxHeight = content.scrollHeight + "px";
-  });
-});
+// window.addEventListener("resize", () => {
+//   document.querySelectorAll(".toggle-header.active").forEach((header) => {
+//     const content = header.nextElementSibling;
+//     content.style.maxHeight = content.scrollHeight + "px";
+//   });
+// });
