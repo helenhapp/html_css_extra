@@ -1,38 +1,4 @@
 // *******************************************************
-//  Розкривні заголовки (Toggle Headers)
-// *******************************************************
-
-// // Знаходимо всі елементи з класом .toggle-header
-// document.querySelectorAll(".toggle-header").forEach((header) => {
-//   const content = header.nextElementSibling; // Наступний елемент після заголовка (прихований блок)
-
-//   header.addEventListener("click", () => {
-//     const isActive = header.classList.toggle("active"); // Додаємо або забираємо клас "active"
-
-//     if (isActive) {
-//       // Якщо розкриваємо блок
-//       content.style.display = "block"; // Тимчасово показуємо для обчислення висоти
-//       const fullHeight = content.scrollHeight + "px"; // Отримуємо повну висоту контенту
-
-//       // Анімуємо розкриття
-//       requestAnimationFrame(() => {
-//         content.style.maxHeight = fullHeight;
-//         content.style.opacity = "1";
-//       });
-//     } else {
-//       // Якщо приховуємо блок
-//       content.style.maxHeight = content.scrollHeight + "px"; // Встановлюємо поточну висоту
-//       content.style.opacity = "0"; // Починаємо затемнення
-
-//       // Потім плавно згортаємо блок
-//       requestAnimationFrame(() => {
-//         content.style.maxHeight = "0";
-//       });
-//     }
-//   });
-// });
-
-// *******************************************************
 //  Розкривні заголовки (Toggle Headers) з ResizeObserver
 // *******************************************************
 
