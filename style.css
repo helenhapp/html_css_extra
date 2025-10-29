@@ -31,7 +31,7 @@ html {
 body {
   min-height: 100dvh;
   padding: 20px;
-  background: url("images/space.jpg") center / cover no-repeat fixed;
+  background: url("images/space_smaller.jpg") center / cover no-repeat fixed;
   font: 16px / 1.5 system-ui, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 1px;
   opacity: 0;
