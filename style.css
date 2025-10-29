@@ -305,7 +305,7 @@ button {
   transition: max-height 0.35s ease, opacity 0.3s ease;
 } */
 
-.content {
+/* .content {
   display: none;
   opacity: 0;
   overflow: visible;
@@ -314,6 +314,13 @@ button {
 .toggle-header.active + .content {
   display: block;
   opacity: 1;
+} */
+
+.content {
+  display: none;
+}
+.toggle-header.active + .content {
+  display: block;
 }
 
 /* *******************************************************

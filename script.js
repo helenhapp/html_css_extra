@@ -49,37 +49,50 @@
 //   });
 // });
 
+// // *******************************************************
+// //  Розкривні заголовки (Toggle Headers) — без анімації
+// // *******************************************************
+
+// document.querySelectorAll(".toggle-header").forEach((header) => {
+//   const content = header.nextElementSibling; // прихований блок
+//   let ro = null; // спостерігач для автооновлення висоти
+
+//   header.addEventListener("click", () => {
+//     const isActive = header.classList.toggle("active");
+
+//     if (isActive) {
+//       content.style.display = "block";
+//       content.style.opacity = "1";
+//       content.style.maxHeight = "none";
+
+//       // спостерігаємо за змінами розміру, щоб розділ залишався адаптивним
+//       ro = new ResizeObserver(() => {
+//         content.style.maxHeight = "none";
+//       });
+//       ro.observe(content);
+//     } else {
+//       content.style.display = "none";
+//       content.style.opacity = "0";
+
+//       // вимикаємо спостерігача
+//       if (ro) {
+//         ro.disconnect();
+//         ro = null;
+//       }
+//     }
+//   });
+// });
+
 // *******************************************************
-//  Розкривні заголовки (Toggle Headers) — без анімації
+//  Розкривні заголовки (Toggle Headers) — найпростіший варіант
 // *******************************************************
 
 document.querySelectorAll(".toggle-header").forEach((header) => {
-  const content = header.nextElementSibling; // прихований блок
-  let ro = null; // спостерігач для автооновлення висоти
+  const content = header.nextElementSibling;
 
   header.addEventListener("click", () => {
     const isActive = header.classList.toggle("active");
-
-    if (isActive) {
-      content.style.display = "block";
-      content.style.opacity = "1";
-      content.style.maxHeight = "none";
-
-      // спостерігаємо за змінами розміру, щоб розділ залишався адаптивним
-      ro = new ResizeObserver(() => {
-        content.style.maxHeight = "none";
-      });
-      ro.observe(content);
-    } else {
-      content.style.display = "none";
-      content.style.opacity = "0";
-
-      // вимикаємо спостерігача
-      if (ro) {
-        ro.disconnect();
-        ro = null;
-      }
-    }
+    content.style.display = isActive ? "block" : "none";
   });
 });
 
