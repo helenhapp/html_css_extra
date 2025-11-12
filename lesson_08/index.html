@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Тема #</title>
+    <title>Тема 8</title>
 
     <!-- ***********************************************
      Prism.js — підсвічування синтаксису
@@ -54,89 +54,388 @@
     *************************************************** -->
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="snippets.js" defer></script>
   </head>
 
   <body>
-    <!-- ***********************************************
-         Шапка сторінки
-    *************************************************** -->
-    <header>
-      <div class="typewriter">
-        <div><h1>⭒.⋆ Тема # ⋆˚.</h1></div>
-      </div>
+    <div class="content-wrapper">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#">← тема #</a></li>
+            <li><a href="#">всі теми</a></li>
+            <li><a href="#">тема # →</a></li>
+          </ul>
+        </nav>
 
-      <p><span class="accent">Назва теми</span></p>
+        <div class="typewriter">
+          <div><h1>⭒.⋆ Тема 8 ⋆˚.</h1></div>
+        </div>
 
-      <!-- Вкладки (навігація між частинами) -->
-      <nav class="tabs">
-        <button class="tab-btn active" data-tab="part1">Частина 1</button>
-        <button class="tab-btn" data-tab="part2">Частина 2</button>
-      </nav>
-    </header>
+        <p>Гіперпосилання</p>
+        <p><a href="./part3.html" target="_blank">Demo</a></p>
 
-    <!-- ***********************************************
-         Основний вміст сторінки
-    *************************************************** -->
-    <main>
-      <!-- *************** Частина 1 *************** -->
-      <div class="tab-content active" id="tab-part1">
-        <section>
-          <div class="flex toggle-header">
-            <button type="button">▶</button>
-            <h2>1: <span class="accent">Приклад</span></h2>
-          </div>
-          <div class="content">
-            <p>Приклад:</p>
-            <pre><code class="language-javascript">console.log("Hello, world!");</code></pre>
-          </div>
-        </section>
+        <!-- Вкладки (навігація між частинами) -->
+        <nav class="tabs">
+          <button type="button" class="tab-btn active" data-tab="part1">
+            Частина 1
+          </button>
+          <button type="button" class="tab-btn" data-tab="part2">
+            Частина 2
+          </button>
+          <button type="button" class="tab-btn" data-tab="part3">
+            Частина 3
+          </button>
+        </nav>
+      </header>
 
-        <section>
-          <div class="flex toggle-header">
-            <button type="button">▶</button>
-            <h2>2: <span class="accent">Завдання</span></h2>
-          </div>
-          <div class="content">
-            <p>Виконати наступні кроки:</p>
-            <ol>
-              <li>...</li>
-              <li>...</li>
-            </ol>
-            <p>Очікуваний результат:</p>
-            <img src="images/example1.jpg" alt="Очікуваний результат" />
-          </div>
-        </section>
-      </div>
+      <main>
+        <!-- ===== ЧАСТИНА 1 ===== -->
+        <div class="tab-content active" id="tab-part1">
+          <!-- ТЕОРІЯ 1 -->
+          <section>
+            <div class="toggle-header">
+              <button type="button">▶</button>
+              <h2>Теорія</h2>
+            </div>
 
-      <!-- *************** Частина 2 *************** -->
-      <div class="tab-content" id="tab-part2">
-        <section>
-          <div class="flex toggle-header">
-            <button type="button">▶</button>
-            <h2>1: <span class="accent">Приклад</span></h2>
-          </div>
-          <div class="content">
-            <p>Приклад:</p>
-            <pre><code class="language-javascript">console.log("Hello, world!");</code></pre>
-          </div>
-        </section>
+            <div class="content">
+              <hr />
 
-        <section>
-          <div class="flex toggle-header">
-            <button type="button">▶</button>
-            <h2>2: <span class="accent">Завдання</span></h2>
-          </div>
-          <div class="content">
-            <p>Виконати наступні кроки:</p>
-            <ol>
-              <li>...</li>
-              <li>...</li>
-            </ol>
-            <p>Очікуваний результат:</p>
-            <img src="images/example2.jpg" alt="Очікуваний результат" />
-          </div>
-        </section>
-      </div>
-    </main>
+              <!-- Tag a -->
+              <h3 id="tag-a">✨ Тег <span class="accent">a</span></h3>
+              <p>
+                Тег <span class="accent">a</span> використовується, щоб
+                перетворити текст або картинку на посилання. Тобто, коли ми
+                клікнемо на такий текст або картинку, нас перекине або на іншу
+                веб-сторінку, або на якусь частину поточної сторінки.
+              </p>
+              <p>
+                Обгортаємо елемент, який хочемо зробити посиланням, тегом
+                <span class="accent">a</span>, і всередині відкриваючої частини
+                тегу додаємо атрибут <span class="accent">href=""</span> із
+                самим посиланням (на сторінку або на якийсь елемент на
+                сторінці).
+              </p>
+              <pre><code class="language-markup">&lt;a href="посилання"&gt;Текст&lt;/a&gt;</code></pre>
+
+              <p>
+                Цей тег можна додавати сам по собі або всередині чи навколо
+                інших тегів, таких як p, h1, img.
+              </p>
+              <pre><code class="language-markup">&lt;h1&gt;Текст, &lt;a href="посилання"&gt;текст з посиланням&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href="посилання"&gt;Текст&lt;/a&gt;&lt;/p&gt;
+
+&lt;a href="посилання"&gt;
+  &lt;img src=""&gt;
+&lt;/a&gt;</code></pre>
+
+              <hr />
+
+              <!-- a styles -->
+              <h3 id="style-a">
+                ✨ Стилі для тегу <span class="accent">a</span>
+              </h3>
+
+              <p>Як стилізувати тег a:</p>
+              <pre><code class="language-css">a {
+  /* стилі для посилань */                
+}</code></pre>
+
+              <p>
+                По замовчуванню посилання мають синій колір і нижнє підкреслення
+                тексту:
+              </p>
+              <img src="./links_01.jpg" alt="" />
+
+              <p>Прибрати підкреслення і змінити колір можна так:</p>
+              <pre><code class="language-css">a {
+	text-decoration: none; /* прибирає підкреслення */
+	color: red; /* змінює колір */
+}</code></pre>
+              <img src="./links_02.jpg" alt="" />
+
+              <p>
+                Щоб користувач міг бачити різницю між посиланнями та звичайним
+                текстом, можна зробити так, щоб посилання змінювали колір при
+                наведенні на них курсору мишки. Для цього використовуєтьтся
+                псевдоклас <span class="accent">:hover</span>:
+              </p>
+              <pre><code class="language-css">a:hover {
+	color: black; /* змінює колір при наведенні мишки */
+}</code></pre>
+              <img src="./links_03.jpg" alt="" />
+
+              <hr />
+
+              <!-- Підтема -->
+              <h3 id="">✨ Атрибут <span class="accent">target</span></h3>
+              <p>
+                Якщо хочемо, щоб посилання відкривалося в новій вкладці, а не в
+                тій самій, можемо додати до тегу
+                <span class="accent">a</span> атрибут
+                <span class="accent">target</span> зі значенням
+                <span class="accent">"_blank"</span>:
+              </p>
+              <pre><code class="language-css">&lt;h2&gt;&lt;a href="" target="_blank"&gt;Луїджі&lt;/a&gt;&lt;/h2&gt;</code></pre>
+
+              <hr />
+            </div>
+          </section>
+
+          <!-- ЗАВДАННЯ 1 -->
+          <section>
+            <div class="toggle-header">
+              <button type="button">▶</button>
+              <h2 class="accent">Завдання — частина 1</h2>
+            </div>
+
+            <div class="content">
+              <h3>✨ Завдання</h3>
+              <ol>
+                <li>
+                  Створіть новий файл з назвою
+                  <span class="accent">"main.html"</span>.
+                </li>
+                <li>
+                  Задайте структуру сторінки (<span class="accent"
+                    >html, head, body, style</span
+                  >).
+                </li>
+                <li>
+                  Додайте на сторінку такі <span class="accent">теги</span>:
+                  <pre><code id="snippet1" class="language-markup"></code></pre>
+                </li>
+                <li>
+                  <span class="accent">Завантажте</span> в свою папку картинку
+                  для фону сторінки:
+                  <img
+                    src="background.jpg"
+                    alt="background image"
+                    width="200"
+                  />
+                </li>
+                <li>
+                  Додайте такі <span class="accent">CSS</span> стилі всередині
+                  тегу <span class="accent">style</span>:
+                  <pre><code id="snippet2" class="language-markup"></code></pre>
+                </li>
+                <li>
+                  Навколо слова <span class="accent">"Маріо"</span> всередині
+                  тегу <span class="accent">h1</span> додайте тег
+                  <span class="accent">a</span> з посиланням на гру Маріо:
+                  <span class="accent"
+                    >https://webskill.com.ua/game/mariogame/index.html</span
+                  >
+                  і зробіть так, щоб це посилання відкривалося в новій вкладці.
+                </li>
+                <li>
+                  Стилізуйте теги <span class="accent">a</span>:
+                  <ul>
+                    <li>приберіть підкреслення тексту;</li>
+                    <li>зробіть колір тексту червоним (red).</li>
+                  </ul>
+                </li>
+                <li>
+                  Стилізуйте теги <span class="accent">a</span> при наведенні
+                  мишки (<span class="accent">:hover</span>):
+                  <ul>
+                    <li>зробіть колір тексту чорним (black).</li>
+                  </ul>
+                </li>
+              </ol>
+
+              <!-- <pre><code id="snippet1" class="language-markup"></code></pre> -->
+
+              <h3>✨ Очікуваний результат</h3>
+              <img src="./part1-result.png" alt="результат коду" />
+            </div>
+          </section>
+        </div>
+
+        <!-- ===== ЧАСТИНА 2 ===== -->
+        <div class="tab-content" id="tab-part2">
+          <!-- ТЕОРІЯ 2 -->
+          <section>
+            <div class="toggle-header">
+              <button type="button">▶</button>
+              <h2>Теорія</h2>
+            </div>
+
+            <div class="content">
+              <hr />
+
+              <!-- id -->
+              <h3 id="id">✨ атрибут <span class="accent">id=""</span></h3>
+              <p>
+                Атрибут <span class="accent">id</span> — це унікальний
+                ідентифікатор елемента, який дозволяє звертатися до конкретного
+                елемента на сторінці за ім'ям, яке ми даємо йому самі. Різниця
+                між <span class="accent">id</span> та
+                <span class="accent">class</span> в тому, що класи можуть
+                повторюватися, а <span class="accent">id</span> має бути
+                унікадьний для кожного елемента.
+              </p>
+              <pre><code class="language-javascript">&lt;h2 id="mario"&gt;Маріо&lt;/h2&gt;</code></pre>
+
+              <p>
+                З допомогою <span class="accent">id</span> можна додавати
+                посилання на елементи всередині сторінки, щоб швидко
+                "перестрибувати" на конкретні елементи, а не гортати сторінку,
+                шукаючи їх. Наприклад, маємо тег
+                <span class="accent">h2</span> з
+                <span class="accent">id="mario"</span>. Щоб зробити посилання на
+                цей тег, створюємо новий тег <span class="accent">p</span> і
+                всередині нього тег <span class="accent">a</span> з посиланням
+                <span class="accent">href="#mario"</span>. Тобто, для посилань з
+                <span class="accent">id</span> пишемо
+                <span class="accent">#</span> та назву
+                <span class="accent">id</span> всередині атрибуту
+                <span class="accent">href=""</span>.
+              </p>
+              <pre><code class="language-javascript">&lt;p&gt;
+	&lt;a href="#mario"&gt;Маріо&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+
+              <!-- <img src="./images/part_2_0#.jpg" alt="результат коду" /> -->
+
+              <hr />
+            </div>
+          </section>
+
+          <!-- ЗАВДАННЯ 2 -->
+          <section>
+            <div class="toggle-header">
+              <button type="button">▶</button>
+              <h2 class="accent">Завдання — частина 2</h2>
+            </div>
+
+            <div class="content">
+              <h3>✨ Завдання</h3>
+              <ol>
+                <li>
+                  Додайте до всіх трьох тегів
+                  <span class="accent">h2</span> ідентифікатори (<span
+                    class="accent"
+                    >id</span
+                  >) зі значеннями:
+                  <ul>
+                    <li>mario</li>
+                    <li>luigi</li>
+                    <li>peach</li>
+                  </ul>
+                </li>
+                <li>
+                  Після заголовку <span class="accent">h1</span> створість тег
+                  <span class="accent">p</span> з трьома посиланнями (тегами
+                  <span class="accent">a</span>) всередині з текстом:
+                  <ul>
+                    <li>Маріо</li>
+                    <li>Луїджі</li>
+                    <li>Принцеса Піч</li>
+                  </ul>
+                </li>
+                <li>
+                  Зробіть так, щоб ці три посилання перекидали нас на
+                  відповідний заголовок
+                  <span class="accent">h2</span> (використайте
+                  <span class="accent">href</span> та символ
+                  <span class="accent">#</span>).
+                </li>
+                <li>
+                  Дайте тегу <span class="accent">h1</span> ідентифікатор зі
+                  значенням <span class="accent">top</span>.
+                </li>
+                <li>
+                  Додайте знизу сторінки параграф (p) з посиланням (a), яке
+                  перекидає нас нагору на початок сторінки (до тегу h1).
+                </li>
+              </ol>
+
+              <h3>✨ Очікуваний результат</h3>
+              <img src="./part2-result.png" alt="результат коду" />
+            </div>
+          </section>
+        </div>
+
+        <!-- ===== ЧАСТИНА 3 ===== -->
+        <div class="tab-content" id="tab-part3">
+          <!-- ТЕОРІЯ 3 -->
+          <section>
+            <div class="toggle-header">
+              <button type="button">▶</button>
+              <h2>Теорія</h2>
+            </div>
+
+            <div class="content">
+              <hr />
+
+              <!-- Підтема -->
+              <h3 id="">✨ Посилання на власні .html файли</h3>
+              <p>
+                Крім посилань на інші сайти, можна робити посилання на ваші
+                власні <span class="accent">.html</span> файли, які знаходяться
+                у вашій папці, і таким чином створювати вебсайти, що мають
+                кілька різних сторінок. Для цього в
+                <span class="accent">href=""</span> пишемо назву файлу.
+              </p>
+              <pre><code class="language-css">&lt;h2 id="luigi"&gt;&lt;a href="luigi.html"&gt;Луїджі&lt;/a"&gt;&lt;/h2&gt;</code></pre>
+
+              <!-- <img src="./images/part_3_0#.jpg" alt="результат коду" /> -->
+
+              <hr />
+            </div>
+          </section>
+
+          <!-- ЗАВДАННЯ 3 -->
+          <section>
+            <div class="toggle-header">
+              <button type="button">▶</button>
+              <h2 class="accent">Завдання — частина 3</h2>
+            </div>
+
+            <div class="content">
+              <h3>✨ Завдання</h3>
+              <ol>
+                <li>
+                  Створіть новий файл з назвою
+                  <span class="accent">"mario.html"</span>.
+                </li>
+                <li>
+                  Скопіюйте і додайте цей код всередині файлу:
+                  <pre><code id="snippet3" class="language-markup"></code></pre>
+                </li>
+                <li>
+                  Всередині файлу
+                  <span class="accent">"main.html"</span>
+                  до тегу h2 з текстом "Маріо" додайте посилання на файл
+                  <span class="accent">"mario.html"</span>.
+                </li>
+                <li>
+                  Всередині файлу
+                  <span class="accent">"mario.html"</span>
+                  до тегу p з текстом "Назад на головну" додайте посилання на
+                  файл
+                  <span class="accent">"main.html"</span>.
+                </li>
+              </ol>
+
+              <h3>✨ Очікуваний результат</h3>
+              <img src="./part3-1-result.png" alt="результат коду" />
+              <br />
+              <img src="./part3-2-result.png" alt="результат коду" />
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      Made by
+      <a href="https://github.com/helenhapp" target="_blank">Olena Hapchyna</a>
+    </footer>
+
+    <button id="scrollTopBtn" title="Повернутися нагору">🚀</button>
   </body>
 </html>
